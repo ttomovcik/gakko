@@ -1,11 +1,11 @@
 # Gakko
-e-nástenka pre školy
+### e-nástenka pre školy
 
 # Priebeh programovania
 |Komponent|Prebieha|Plánované|Dokončené|
 |:-|:-|:-|:-|
 |Jadro aplikácie|||✔|
-|Landing page||✔||
+|Úvodná stránka||✔||
 |Nástenka|✔|||
 |Nastavenia|||✔|
 |Rozvrh hodín||✔||
@@ -18,6 +18,7 @@ Aplikácia sa dá použiť:
 - alebo na [Firebase](https://firebase.com) s vlastným Google účtom
 
 # Minimal requirements
+> Aj stará vykopávka, okrem kalkulačiek
 ### PC
 - Windows XP
 - Linuxová distribúcia s prehliadačom
@@ -35,10 +36,8 @@ Aplikácia sa dá použiť:
 
 # Used stuff
 * [Visual Studio Code](https://code.visualstudio.com/) - Textový editor / IDE
-* [npm](https://nnpmjs.com) - Node package manager
-* [Cypress](https://cypress.io/) - E2E Testovanie
+* [Cypress](https://cypress.io/) - E2E Integračné testovanie
 * [Google Firebase](https://firebase.google.com/) - BaaS (Backend-as-a-Service)
-* [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - Testovanie načítavania a optimalizácie
 
 # Versioning
 Na verzovanie používame [SemVer](http://semver.org/)  Pre zobrazenie dostupných verzií, prejdite na [značky na tomto repozitári](https://github.com/ttomovcik/gakko/tags). 
