@@ -4,29 +4,29 @@ e-nástenka pre školy
 # Priebeh programovania
 |Komponent|Prebieha|Plánované|Dokončené|
 |:-|:-|:-|:-|
-|Jadro aplikácie|✔|||
+|Jadro aplikácie|||✔|
 |Landing page||✔||
 |Nástenka|✔|||
-|Nastavenia|✔|||´
+|Nastavenia|||✔|
 |Rozvrh hodín||✔||
 |Kalendár||✔||
     
-# Prvé použitie
+# Gettings Started
 Aplikácia sa dá použiť:
 - ako PWA na stránke [Firebase](https://gakko-pwa.firebaseapp.com/)
 - na vlastnom serveri
 - alebo na [Firebase](https://firebase.com) s vlastným Google účtom
 
-# Minimálne požiadavky
+# Minimal requirements
 ### PC
 - Windows XP
 - Linuxová distribúcia s prehliadačom
 - macOS (meh)
-### Mobilné zariadenia
+### Mobile devices
 - Android 3.x (non-PWA) alebo 5.x (PWA)
 - Windows 10 Mobile 10586
 - iOS (meh)
-### Prehliadače
+### Browsers
 - Mozilla Firefox 58
 - Chromium 67
 - Opera 20
@@ -40,12 +40,15 @@ Aplikácia sa dá použiť:
 * [Google Firebase](https://firebase.google.com/) - BaaS (Backend-as-a-Service)
 * [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - Testovanie načítavania a optimalizácie
 
-# Verzovanie
+# Versioning
 Na verzovanie používame [SemVer](http://semver.org/)  Pre zobrazenie dostupných verzií, prejdite na [značky na tomto repozitári](https://github.com/ttomovcik/gakko/tags). 
 
 # Authors
 
 * **Tomáš Tomovčík** - *samotná aplikácia* - [ttomovcik](https://github.com/ttomovcik)
 
-# Licencia
+# License
 Tento projekt používa Apache 2.0 licenciu - viď [LICENSE](LICENSE) pre viac detailov (EN).
+
+
+> veci označené s **(meh)** neboli testované alebo nie sú podporované

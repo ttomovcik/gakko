@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../thirdparty/bootstrap@4.3.1/bootstrap.min.css">
+    <link rel="stylesheet" href="../../thirdparty/material-design-icons@3.0.1/material-icons.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../thirdparty/fontawesome-free@5.7.2/css/all.min.css">
+    <link rel="shortcut icon" type="image/png" href="../../favicon.ico" />
+    <link rel="favicon" type="image/png" href="../../favicon.ico" />
+    <title>Nastavenia</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow-lg-sm">
+        <a class="navbar-brand mr-auto mr-lg-0" href="#">Nastavenia<sup>α</sup></a>
+    </nav>
+
+    <div class="bg-light shadow-lg" id="group_overview">
+        <nav class="nav nav-underline">
+            <strong class="nav-link">PREJSŤ NA NASTAVENIE</strong>
+            <a class="nav-link active" href="#group_overview">Prehľad</a>
+            <a class="nav-link" href="#group_school">Škola</a>
+            <a class="nav-link" href="#group_app">Aplikácia</a>
+            <a class="nav-link" href="#group_app">Informácie</a>
+        </nav>
+    </div>
+
+    <main role="main" class="container">
+
+        <div class="modal fade" id="importSettingsModal" tabindex="-1" role="dialog" aria-labelledby="importSettingsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="importSettingsModalLabel">Import nastavení</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <textarea id="input_importSettings" class="form-control bg-transparent" rows="6" type="text"
+                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Text s nastaveniami vložte sem"
+                            onpaste="prettifyJSON('input_importSettings');"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavrieť</button>
+                        <button type="button" class="btn btn-primary" id="modalBtn_importSettings" onclick="settingsManager('import','','','input_importSettings','importSettingsModal');">Spustiť
+                            import</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="snackbarContainer" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button id="snackbarAction" class="mdl-snackbar__action" type="button"></button>
+        </div>
+
+        <div class="d-flex align-items-center p-3 my-3 text-light bg-dark rounded shadow-lg" id="group_school">
+            <img class="mr-3" src="../../assets/icons/color/icon-144x144.png" alt="" width="64" height="48">
+            <div class="lh-100">
+                <h3 class="mb-0 text-light lh-100">Gakkō<sup>α</sup></h3>
+                <small>0.1.0-alpha</small>
+            </div>
+        </div>
+
+        <!-- Škola -->
+
+        <div class="my-3 p-3 bg-white rounded shadow-lg">
+            <h4 class="border-bottom border-gray pb-2 mb-0">Škola</h4>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Názov školy</title>
+                    <rect width="100%" height="100%" fill="#00CC6A"></rect><text x="50%" y="50%" fill="#00CC6A" dy=".3em">32x32</text>
+                </svg>
+                <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
+                    <strong class="d-block text-gray-dark settings-text_form-margin" style="color: #00CC6A !important">Názov
+                        školy</strong>
+                    <input id="input_schoolName" class="form-control form-control-sm" type="text" placeholder="Napr. Stredná škola dačo dačo"
+                        onfocusout="settingsManager('set', 'schoolname', this.value);">
+                </p>
+            </div>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                </svg>
+                <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
+                    <strong class="d-block text-gray-dark settings-text_form-margin" style="color: #007bff !important">Adresa
+                        EduPage serveru</strong>
+                    <input id="input_edupageServer" class="form-control form-control-sm" type="text" placeholder="www.<skola>.edupage.org (bez tých zátvoriek)"
+                        onfocusout="settingsManager('set', 'edupageserver', this.value);">
+                </p>
+            </div>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#FF4343"></rect><text x="50%" y="50%" fill="#FF4343" dy=".3em">32x32</text>
+                </svg>
+                <p class="media-body pb-3 mb-0 lh-125 border-gray">
+                    <strong class="d-block text-gray-dark settings-text_form-margin" style="color: #FF4343 !important">Dodatočné
+                        web stránky na
+                        zobrazenie</strong>
+                    <input id="input_additionalPages1" class="form-control form-control-sm settings-text_form-margin"
+                        type="text" placeholder="Napr. www.ayy-lmao.com" onfocusout="settingsManager('set', 'additionalapages1', this.value);">
+                    <input id="input_additionalPages2" class="form-control form-control-sm settings-text_form-margin"
+                        type="text" placeholder="You get the point there, hopefully" onfocusout="settingsManager('set', 'additionalapages2', this.value);">
+                    <input id="input_additionalPages3" class="form-control form-control-sm settings-text_form-margin"
+                        type="text" placeholder="¯\_(ツ)_/¯" onfocusout="settingsManager('set', 'additionalapages3', this.value);">
+                </p>
+            </div>
+        </div>
+
+        <!-- Aplikácia -->
+
+        <div class="my-3 p-3 bg-white rounded shadow-lg" id="group_app">
+            <h4 class="border-bottom border-gray pb-2 mb-0">Aplikácia</h4>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#7A7574"></rect><text x="50%" y="50%" fill="#7A7574" dy=".3em">32x32</text>
+                </svg>
+                <div class="media-body pb-3 mb-0 lh-125 border-gray border-bottom">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark settings-text_form-margin" style="color: #7A7574 !important">Interval
+                            zobrazenia stránok</strong>
+                    </div>
+                    <span class="d-block">Predvolený, 10 sekúnd</span>
+                </div>
+            </div>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#744DA9"></rect><text x="50%" y="50%" fill="#744DA9" dy=".3em">32x32</text>
+                </svg>
+                <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark settings-text_form-margin" style="color: #744DA9 !important">Vzhľad
+                            aplikácie</strong>
+                    </div>
+                    <span class="d-block">Primárna farba: Indigo <br>
+                        Sekundárna farba (detaily): Ružová
+                    </span>
+                </div>
+            </div>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#FFB900"></rect><text x="50%" y="50%" fill="#FFB900" dy=".3em">32x32</text>
+                </svg>
+                <div class="media-body pb-3 mb-0 lh-125 border-gray border-bottom">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark settings-text_form-margin" style="color: #FFB900 !important">Rozšírený
+                            vzhľad</strong>
+                    </div>
+                    <span class="d-block">Vypnutý, a aj bude. Táto funkcia je vo vývoji.</span>
+                </div>
+            </div>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#E81123"></rect><text x="50%" y="50%" fill="#E81123" dy=".3em">32x32</text>
+                </svg>
+                <div class="media-body pb-3 mb-0 lh-125 border-gray">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark settings-text_form-margin" style="color: #E81123 !important">Správa
+                            nastavení</strong>
+                    </div>
+                    <button type="button" class="btn btn-success settings_button_row_spacing" onclick="settingsManager('export');">Export</button>
+                    <button type="button" class="btn btn-outline-dark settings_button_row_spacing" data-toggle="modal"
+                        data-target="#importSettingsModal">Import</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="settingsManager('reset');">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riešenie problémov -->
+
+        <div class="my-3 p-3 bg-white rounded shadow-lg" id="group_oof">
+            <h4 class="border-bottom border-gray pb-2 mb-0">Informácie</h4>
+            <p>Gakkō 0.1.0-alpha</p>
+            <ul>
+                <li>12 knižníc tretích strán</li>
+                <li>Úžasne nestabilná verzia</li>
+                <li>Takmer nič nefunguje</li>
+                <li>A omnoho viac. Už od 12,99€</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="../../thirdparty/jquery@3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="../../thirdparty/popper.js@1.14.7/popper.min.js"></script>
+    <script defer src="../../thirdparty/bootstrap@4.3.1/bootstrap.bundle.min.js"></script>
+    <script defer src="../../thirdparty/bootstrap@4.3.1/bootstrap.min.js"></script>
+    <script defer src="../../thirdparty/material-design-lite@1.3.0/material.min.js"></script>
+</body>
+
+</html>
