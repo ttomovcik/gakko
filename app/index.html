@@ -26,16 +26,16 @@
 <body id="top">
   <header>
     <div class="g_header">
-      <div class="bg-light text-dark shadow" id="group_overview">
+      <div class="bg-transparent text-light shadow" id="group_overview">
         <nav class="nav navbar-expand">
           <strong class="nav-link">Gakkō<sup>α</sup></strong>
-          <a class="nav-link" href="#">Prihlásenie</a>
           <a class="nav-link" href="#features">Funkcie</a>
           <!-- 
             We will send them to the main dashboard!
             TODO:  Reset settings on load if not logged in!! 
           -->
           <a class="nav-link" href="./pages/demo/index.html">Demo</a>
+          <a class="nav-link" href="#">Prihlásiť</a>
           <a class="nav-link" href="#group_app">Stiahnuť</a>
         </nav>
       </div>
@@ -163,6 +163,9 @@
   </script>
   <script src="./thirdparty/jquery@3.3.1/jquery-3.3.1.min.js"></script>
   <script src="./thirdparty/popper.js@1.14.7/popper.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script defer src="./assets/js/core/gakko.telemetry.js"></script>
   <script defer src="./thirdparty/bootstrap@4.3.1/bootstrap.min.js"></script>
   <script defer src="./thirdparty/bootstrap-switch@3.3.4/bootstrap-switch.min.js"></script>
   <script defer src="./thirdparty/paper-kit@2.1.0/paper-kit.js"></script>

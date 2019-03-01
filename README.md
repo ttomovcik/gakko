@@ -5,22 +5,22 @@
 |Komponent|Prebieha|Plánované|Dokončené|
 |:-|:-|:-|:-|
 |[Jadro aplikácie](https://github.com/ttomovcik/gakko/commit/c1228fd26c509b3ce588d7fba03a6a56a917c197)|||✔|
-|Firebase prihlasovanie||✔|
+|Firebase prihlasovanie|✔|
 |Firebase Hosting|✔||
-|Úvodná stránka|||✔|
+|[Úvodná stránka](https://github.com/ttomovcik/gakko/commit/94d2855ed5fd101dfd6ca1fdb9f4c9a5f841d461)|||✔|
 |Nástenka|✔|||
 |Nastavenia|✔|||
 |Rozvrh hodín||✔||
 |Kalendár||✔||
     
-# Gettings Started
+# Getting Started
 Aplikácia sa dá použiť:
 - ako PWA na stránke [Firebase](https://gakko-pwa.firebaseapp.com/)
 - na vlastnom serveri
 - alebo na [Firebase](https://firebase.com) s vlastným Google účtom
 
 # Minimal requirements
-> Aj stará vykopávka, okrem kalkulačiek
+> Aj stará vykopávka, okrem kalkulačiek a pod.
 ### PC
 - Windows XP
 - Linuxová distribúcia s prehliadačom
