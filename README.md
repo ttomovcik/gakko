@@ -4,10 +4,12 @@
 # Priebeh programovania
 |Komponent|Prebieha|Plánované|Dokončené|
 |:-|:-|:-|:-|
-|Jadro aplikácie|||✔|
-|Úvodná stránka||✔||
+|[Jadro aplikácie](https://github.com/ttomovcik/gakko/commit/c1228fd26c509b3ce588d7fba03a6a56a917c197)|||✔|
+|Firebase prihlasovanie||✔|
+|Firebase Hosting|✔||
+|Úvodná stránka|||✔|
 |Nástenka|✔|||
-|Nastavenia|||✔|
+|Nastavenia|✔|||
 |Rozvrh hodín||✔||
 |Kalendár||✔||
     

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="sk-SK">
+
+<head>
+  <title>Gakkō</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
+  <link rel="favicon" type="image/png" href="./favicon.ico" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-title" content="Gakkō">
+  <meta name="application-name" content="Gakkō">
+  <meta name="Description" content="e-nástenka pre školy">
+  <meta name="msapplication-TileColor" content="#3F51B5">
+  <meta name="theme-color" content="#ffffff">
+  <link href="./pages/landing/styles.css" rel="stylesheet">
+  <link href="./thirdparty/fontawesome-free@5.7.2/css/fontawesome.min.css" rel="stylesheet">
+  <link href="./thirdparty/fontawesome-free@5.7.2/css/solid.min.css" rel="stylesheet">
+  <link href="./thirdparty/fontawesome-free@5.7.2/css/brands.min.css" rel="stylesheet">
+  <link href="./thirdparty/bootstrap@4.3.1/bootstrap.min.css" rel="stylesheet">
+  <link href="./thirdparty/paper-kit@2.1.0/paper-kit.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body id="top">
+  <header>
+    <div class="g_header">
+      <div class="bg-light text-dark shadow" id="group_overview">
+        <nav class="nav navbar-expand">
+          <strong class="nav-link">Gakkō<sup>α</sup></strong>
+          <a class="nav-link" href="#">Prihlásenie</a>
+          <a class="nav-link" href="#features">Funkcie</a>
+          <!-- 
+            We will send them to the main dashboard!
+            TODO:  Reset settings on load if not logged in!! 
+          -->
+          <a class="nav-link" href="./pages/demo/index.html">Demo</a>
+          <a class="nav-link" href="#group_app">Stiahnuť</a>
+        </nav>
+      </div>
+      <nav class="navbar navbar-expand-md navbar-transparent">
+        <div class="container">
+          <img class="img-fluid pr-3 g_logo-img" src="./assets/icons/white/icon-512x512.png" alt="logo" height="64" width="64">
+          <a class="navbar-brand px-0 py-0" href="#">Gakkō<sup><small>0.1</small></sup></a>
+          <div class="collapse navbar-collapse"></div>
+        </div>
+      </nav>
+      <div class="container g_header-content text-left text-white">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <!--
+              TODO: Change later
+            -->
+            <h1 class="text-white mb-4">{{ e_oof_generic }}</h1>
+            <p>Prispôsobiteľná e-nástenka a informačný systém (nielen) pre školy.</p>
+            <ul class="py-1 list-unstyled">
+              <li class="py-2"><i class="fa fa-check-circle pr-4" aria-hidden="true"></i> Jednoduché nasadenie a
+                používanie</li>
+              <ul class="py-1 list-unstyled">
+                <li class="py-2"><i class="fa fa-check-circle pr-4" aria-hidden="true"></i> Žiadne poplatky za licenciu</li>
+                <li class="py-2"><i class="fa fa-check-circle pr-4" aria-hidden="true"></i> Responzívny dizajn s
+                  Bootstrap &amp; Material Design Lite</li>
+              </ul><a class="mt-4 btn btn-outline-neutral btn-round" href="#features">zistiť viac</a>
+          </div>
+          <div class="col-md-6 col-sm-12 text-right"><img class="img-fluid" src="./assets/images/ti-im-multi-device.png"
+              alt="Image"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-content">
+    <div>
+      <div class="container">
+        <div class="g_product-details section" id="features">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+              <div class="description">
+                <div class="h4">Open source</div>
+                <p class="text-muted">Aplikácia má otvorený zdrojový kód a je zdarma. Židne poplatky za licenciu a
+                  podobne.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+              <div class="description">
+                <div class="h4">Jednoduché nasadenie</div>
+                <p class="text-muted">Gakkō je webová aplikácia. To znamená že funguje na takmer každom zariadení s
+                  prístupom na internet a prehliadačom.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
+              <div class="description">
+                <div class="h4">Responzívny dizajn, HTML5, CSS3</div>
+                <p class="text-muted">Idk fam, it just works.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="g_download-section section bg-gradient" id="download">
+        <div class="container">
+          <div class="h2 text-center text-title text-white pb-5">Stiahnuť Gakkō<sup>α</sup></div>
+          <div class="row">
+            <div class="col-md-4 col-sm-12"><a class="g_run" href="#">
+                <div class="card">
+                  <div class="row pb-3">
+                    <div class="col-lg-3 col-md-12 g_download-icon"><i class="pt-4 fas fa-random fa-4x" aria-hidden="true"></i></div>
+                    <div class="col-lg-9 col-md-12 g_download-icon-detail">
+                      <div class="h4 pb-1">Spustiť</div>
+                      <p class="text-muted">Priamo v prehliadači</p>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="col-md-4 col-sm-12"><a class="g_install" href="https://github.com/ttomovcik/gakko/wiki/install-pwa">
+                <div class="card">
+                  <div class="row pb-3">
+                    <div class="col-lg-3 col-md-12 g_download-icon"><i class="pt-4 fas fa-arrow-alt-circle-down fa-4x"
+                        aria-hidden="true"></i></div>
+                    <div class="col-lg-9 col-md-12 g_download-icon-detail">
+                      <div class="h4 pb-1">Inštalovať</div>
+                      <p class="text-muted">Nastaviť ako PWA s Workbox-om</p>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+            <div class="col-md-4 col-sm-12"><a class="g_hosting" href="#">
+                <div class="card">
+                  <div class="row pb-3">
+                    <div class="col-lg-3 col-md-12 g_download-icon"><i class="pt-4 fa fa-server fa-4x" aria-hidden="true"></i></div>
+                    <div class="col-lg-9 col-md-12 g_download-icon-detail">
+                      <div class="h4 pb-1">Hosting</div>
+                      <p class="text-muted">Pomocou Google Firebase</p>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-black g_footer">
+    <div class="container py-5">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p>Gakkō<sup>α</sup> je stále vo vývoji a niektoré funckie alebo UI sa môžu zmeniť!</p>
+          <p class="mt-3">Copyright &copy; Tomáš Tomovčík.<br>Design - <a class="credit" href="https://templateflip.com"
+              target="_blank">TemplateFlip</a> a <a class="credit" href="https://github.com/ttomovcik" target="_blank">@ttomovcik</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+  <script src="./thirdparty/jquery@3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="./thirdparty/popper.js@1.14.7/popper.min.js"></script>
+  <script defer src="./thirdparty/bootstrap@4.3.1/bootstrap.min.js"></script>
+  <script defer src="./thirdparty/bootstrap-switch@3.3.4/bootstrap-switch.min.js"></script>
+  <script defer src="./thirdparty/paper-kit@2.1.0/paper-kit.js"></script>
+  <script async src="./assets/js/helpers/gakko.helper.smoothScroll.js"></script>
+</body>
+
+</html>

@@ -95,9 +95,8 @@ function settingsManager(action, name, value, dataSource, importModal) {
                     value);
             }
             break;
-        case (action == "qsave"):
+        case (action == "qset"):
             if (value) {
-                console.log('saving');
                 localStorage.setItem(name, value);
             }
             break;
@@ -131,11 +130,11 @@ function settingsManager(action, name, value, dataSource, importModal) {
             break;
         case (action == "import"):
             let data = JSON.parse(document.getElementById(dataSource).value);
-            let modalToClose = document.getElementById(importModal)
+            let modalToClose = document.getElementById(importModal);
             Object.keys(data).forEach(function (k) {
                 localStorage.setItem(k, data[k]);
             });
-            $(modalToClose).modal('hide')
+            $(modalToClose).modal('hide');
             showSnackbar(
                 'snackbarContainer',
                 'Nastavenia boli importované',

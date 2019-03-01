@@ -1,0 +1,179 @@
+body,
+p,
+.navbar,
+.brand,
+a,
+.td-name,
+td,
+button,
+input,
+select,
+textarea {
+  font-family: "Raleway", "Raleway", Arial, sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.title,
+.card-title,
+.info-title,
+.footer-brand,
+.footer-big h5,
+.footer-big h4,
+.media .media-heading {
+  font-weight: 400;
+}
+
+.title {
+  color: #111111;
+}
+
+.bg-gradient {
+  background: linear-gradient(270deg, rgb(36, 156, 255) 0%, #0063B1 100%);
+}
+
+.g_header {
+  background: linear-gradient(270deg, rgb(36, 156, 255) 0%, #0063B1 100%);
+  position: relative;
+  background-size: cover;
+  min-height: 600px;
+}
+
+.g_header .navbar .navbar-brand {
+  font-size: 24px;
+  font-family: "Raleway", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  box-shadow: none;
+  letter-spacing: 1px;
+}
+
+#group_overview {
+  font-size: 18px;
+  min-height: 48px !important;
+}
+
+.g_header .g_header-content {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.g_header .g_header-content h1 {
+  letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+  .g_header h1 {
+    font-size: 38px;
+  }
+
+  .g_header .g_header-content img {
+    padding-top: 40px;
+  }
+
+  .g_header .g_header-content li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .g_header .g_header-content img {
+    margin-top: 2px !important;
+    padding-top: none !important;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .g_header .g_logo-img {
+    padding-left: 20px;
+  }
+
+  .g_header .navbar-brand {
+    padding-right: 20px !important;
+  }
+
+  .g_header .g_header-content li {
+    font-size: 10px;
+  }
+}
+
+/* Body Section */
+.g_product-details .description {
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.g_product-details .description .h4 {
+  color: #111111;
+  padding-bottom: 1.5rem;
+}
+
+.g_product-details .icon {
+  float: left;
+  margin-top: 24px;
+  margin-right: 60px;
+  font-size: 3rem;
+}
+
+.g_download-section i {
+  color: #888;
+}
+
+.g_download-section .g_run:hover i {
+  color: #00CC6A;
+}
+
+.g_download-section .g_install:hover i {
+  color: #0078D7;
+}
+
+.g_download-section .g_hosting:hover i {
+  color: #F7630C;
+}
+
+.g_download-section .g_download-icon {
+  padding-left: 40px;
+}
+
+@media (max-width: 992px) {
+  .g_download-section p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .g_download-section p {
+    font-size: 12px;
+  }
+
+  .g_download-section .g_download-icon {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .g_download-section .g_download-icon-detail {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .g_download-section p {
+    font-size: 14px;
+  }
+}
+
+/* Footer sectiom */
+.g_footer a.credit {
+  color: inherit;
+  border-bottom: 1px dashed;
+}
