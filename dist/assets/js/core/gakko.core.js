@@ -41,7 +41,7 @@ function prettifyLTTValues(i) {
 }
 
 /**
- * Logs some shit into console
+ * Logs some shit into console.
  * 
  * @param {String} fun Function that calls consoleHelper
  * @param {String} event What happend
