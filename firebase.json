@@ -1,0 +1,51 @@
+{
+  "hosting": {
+      "public": "app",
+      "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+      ],
+      "redirects": [{
+              "source": "/login",
+              "destination": "https://hackertyper.net/",
+              "type": 301
+          },
+          {
+              "source": "/wp-admin",
+              "destination": "https://hackertyper.net/",
+              "type": 301
+          },
+          {
+              "source": "/home",
+              "destination": "https://gakko-55dfd.firebaseapp.com/index.html",
+              "type": 301
+          },
+          {
+              "source": "/settings",
+              "destination": "https://gakko-55dfd.firebaseapp.com/pages/settings/settings.html",
+              "type": 301
+          }
+      ],
+      "headers": [{
+              "source": "**/*.@(jpg|jpeg|png|svg|ico|gif|webp|eot|ttf|woff|woff2)",
+              "headers": [{
+                      "key": "Cache-Control",
+                      "value": "max-age=31536000"
+                  },
+                  {
+                      "key": "Content-Encoding",
+                      "value": "gzip"
+                  }
+              ]
+          },
+          {
+              "source": "**/*.@(html|css|js)",
+              "headers": [{
+                  "key": "Cache-Control",
+                  "value": "max-age=31536000"
+              }]
+          }
+      ]
+  }
+}

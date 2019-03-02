@@ -193,7 +193,6 @@ class showCurrentClassState {
                     classStateTime.innerHTML = 'Koniec 15:05';
                     break;
                 default:
-                    classStateTime.innerHTML = 'Lorem ipsum';
                     break;
             };
         }

@@ -1,0 +1,28 @@
+{
+  "name": "gakko",
+  "description": "e-nástenka pre školy",
+  "version": "0.1.0-alpha",
+  "keywords": [
+    "dashboard",
+    "school"
+  ],
+  "readme": "README.MD",
+  "maintainers": [{
+    "name": "Tomáš Tomovčík",
+    "email": "tomovcik.tomas@gmail.com",
+    "web": "https://github.com/ttomovcik/"
+  }],
+  "bugs": {
+    "web": "https://github.com/ttomovcik/gakko/issues"
+  },
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/ttomovcik/gakko.git"
+  }],
+  "licenses": [{
+    "name": "Apache-2.0",
+    "url": "https://github.com/ttomovcik/gakko/blob/develop/LICENSE"
+  }],
+  "license": "Apache-2.0",
+  "homepage": "https://gakko-55dfd.firebaseapp.com/"
+}
