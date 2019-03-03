@@ -6,7 +6,7 @@
 |:-|:-|:-|:-|
 |[Jadro aplikácie](https://github.com/ttomovcik/gakko/commit/c1228fd26c509b3ce588d7fba03a6a56a917c197)|||✔|
 |Firebase prihlasovanie|✔|
-|Firebase Hosting|✔||
+|Firebase Hosting|||✔
 |[Úvodná stránka](https://github.com/ttomovcik/gakko/commit/94d2855ed5fd101dfd6ca1fdb9f4c9a5f841d461)|||✔|
 |Nástenka|✔|||
 |Nastavenia|✔|||

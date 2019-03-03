@@ -35,7 +35,6 @@
             TODO:  Reset settings on load if not logged in!! 
           -->
           <a class="nav-link" href="./pages/demo/index.html">Demo</a>
-          <a class="nav-link" href="#">Prihlásiť</a>
           <a class="nav-link" href="#group_app">Stiahnuť</a>
         </nav>
       </div>
@@ -52,7 +51,7 @@
             <!--
               TODO: Change later
             -->
-            <h1 class="text-white mb-4">{{ e_oof_generic }}</h1>
+            <h1 class="text-white mb-4">Moderná e-nástenka</h1>
             <p>Prispôsobiteľná e-nástenka a informačný systém (nielen) pre školy.</p>
             <ul class="py-1 list-unstyled">
               <li class="py-2"><i class="fa fa-check-circle pr-4" aria-hidden="true"></i> Jednoduché nasadenie a
@@ -63,8 +62,11 @@
                   Bootstrap &amp; Material Design Lite</li>
               </ul><a class="mt-4 btn btn-outline-neutral btn-round" href="#features">zistiť viac</a>
           </div>
-          <div class="col-md-6 col-sm-12 text-right"><img class="img-fluid" src="./assets/images/ti-im-multi-device.png"
-              alt="Image"></div>
+          <div class="col-md-6 col-sm-12 text-center">
+            <span style="font-size: 196px; color: #FAFAFA;">
+              <i class="fas fa-swatchbook"></i>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -104,7 +106,7 @@
         <div class="container">
           <div class="h2 text-center text-title text-white pb-5">Stiahnuť Gakkō<sup>α</sup></div>
           <div class="row">
-            <div class="col-md-4 col-sm-12"><a class="g_run" href="#">
+            <div class="col-md-4 col-sm-12"><a class="g_run" href="./pages/demo/index.html">
                 <div class="card">
                   <div class="row pb-3">
                     <div class="col-lg-3 col-md-12 g_download-icon"><i class="pt-4 fas fa-random fa-4x" aria-hidden="true"></i></div>
@@ -115,7 +117,7 @@
                   </div>
                 </div>
               </a></div>
-            <div class="col-md-4 col-sm-12"><a class="g_install" href="https://github.com/ttomovcik/gakko/wiki/install-pwa">
+            <div class="col-md-4 col-sm-12"><a class="g_install" href="https://github.com/ttomovcik/gakko/wiki/">
                 <div class="card">
                   <div class="row pb-3">
                     <div class="col-lg-3 col-md-12 g_download-icon"><i class="pt-4 fas fa-arrow-alt-circle-down fa-4x"
@@ -127,7 +129,7 @@
                   </div>
                 </div>
               </a></div>
-            <div class="col-md-4 col-sm-12"><a class="g_hosting" href="#">
+            <div class="col-md-4 col-sm-12"><a class="g_hosting" href="https://github.com/ttomovcik/gakko/wiki/">
                 <div class="card">
                   <div class="row pb-3">
                     <div class="col-lg-3 col-md-12 g_download-icon"><i class="pt-4 fa fa-server fa-4x" aria-hidden="true"></i></div>
@@ -154,18 +156,11 @@
       </div>
     </div>
   </footer>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
-  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.googletagmanager.com/gtag/js?id=UA-133294265-1"></script>
+  <script src="./assets/js/core/gakko.core.js"></script>
   <script src="./thirdparty/jquery@3.3.1/jquery-3.3.1.min.js"></script>
   <script src="./thirdparty/popper.js@1.14.7/popper.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
-  <script defer src="./assets/js/core/gakko.telemetry.js"></script>
   <script defer src="./thirdparty/bootstrap@4.3.1/bootstrap.min.js"></script>
   <script defer src="./thirdparty/bootstrap-switch@3.3.4/bootstrap-switch.min.js"></script>
   <script defer src="./thirdparty/paper-kit@2.1.0/paper-kit.js"></script>

@@ -22,7 +22,7 @@
                     <i id="menu_icon" class="material-icons">more_vert</i>
                 </button>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="btn-menu">
-                    <li class="mdl-menu__item" disabled>Nastavenia</li>
+                    <li class="mdl-menu__item" onclick="location.href='../settings/settings.html'">Nastavenia</li>
                     <hr>
                     <li class="mdl-menu__item" onclick="location.href='https://www.github.com/ttomovcik/gakko'">Domovská
                         stránka projektu</li>
@@ -58,13 +58,27 @@
             </div>
         </main>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-133294265-1"></script>
     <script src="../../assets/js/core/gakko.core.js"></script>
-    <script src="../../assets/js/addons/generic.displayDateTime/gakko.addon.displayDateTime.js"></script>
     <script src="../../assets/js/addons/school.showCurrentClass/gakko.addon.showCurrentClass.js"></script>
     <script async>
-        setInterval(function () {
-            showCurrentDateTimeInMainUI("dateTime");
-        }, 1000);
+        const defaults_appName = "Gakkō";
+        const defaults_appVersion = "0.1.0-alpha";
+        const defaults_alphaSuperScript = "<sup>α</sup>";
+        let ui_header_appTitle = document.getElementById('appTitle');
+        let stored_school_schoolName = settingsManager("get", "schoolname");
+        let stored_school_edupageServer = settingsManager("get", "edupageserver");
+        let stored_school_additionalPages1 = settingsManager("get", "additionalapages1");
+        let stored_school_additionalPages2 = settingsManager("get", "additionalapages2");
+        let stored_school_additionalPages3 = settingsManager("get", "additionalapages3");
+        let stored_app_webpageinterval = settingsManager("get", "webpageinterval");
+        if (stored_school_schoolName) {
+            ui_header_appTitle.innerHTML = stored_school_schoolName;
+        } else {
+            ui_header_appTitle = defaults_appName + defaults_alphaSuperScript;
+        }
+        showCurrentDateTimeInMainUI("dateTime");
         new showCurrentClassState('ccIcon', 'ccName', 'ucName');
     </script>
     <script defer src="../../thirdparty/material-design-lite@1.3.0/material.min.js"></script>
