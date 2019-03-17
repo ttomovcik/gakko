@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../assets/css/ui.dashboard.css">
+  <link rel="stylesheet" href="../../libs/material-design-lite@1.3.0/material.min.css">
+  <link rel="stylesheet" href="../../libs/material-design-icons@3.0.1/material-icons.css">
+  <title>Nástenka</title>
+</head>
+
+<body>
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+
+        <span class="mdl-layout-title" id="appTitle">Nástenka<sup>α</sup></span>
+
+        <div class="mdl-layout-spacer"></div>
+
+        <button class="mdl-button mdl-js-button mdl-button--icon" id="btn_settings" onclick="location.href='../settings/settings.html'">
+          <i class="material-icons">settings</i>
+        </button>
+        <div class="mdl-tooltip mdl-tooltip--large" for="btn_settings">Nastavenia</div>
+
+        <button id="menu_dashboard" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu_dashboard">
+          <li class="mdl-menu__item" onclick="location.href='../settings/settings.html'">Nastavenia</li>
+          <hr>
+          <li class="mdl-menu__item" onclick="location.href='https://github.com/ttomovcik/gakko'">Domovská
+            stránka projektu</li>
+          <li class="mdl-menu__item" onclick="location.href='https://github.com/ttomovcik/gakko/issues'">Nahlásiť
+            chybu / pripomienku</li>
+          <li class="mdl-menu__item" onclick="location.href='https://github.com/ttomovcik/gakko/wiki'">Nápoveda</li>
+        </ul>
+
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+        </nav>
+
+      </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+      <nav class="mdl-navigation text-center">
+        <h3 id="clock">...</h3>
+        <hr>
+        <h3 id="ccIcon">...</h3>
+        <span>
+          <h3 id="ccName">...</h3>
+        </span>
+        <p id="ucName">...</p>
+        <hr>
+        <a class="weatherwidget-io" href="https://forecast7.com/sk/49d1118d45/povazska-bystrica/" data-font="Roboto"
+          data-icons="Climacons Animated" data-days="3" data-theme="dark" data-basecolor="" data-shadow="#bdbdbd"
+          data-textcolor="#000" data-highcolor="#212121" data-lowcolor="#757575" data-mooncolor="#bdbdbd"
+          data-cloudcolor="#bdbdbd" data-cloudfill="#eeeeee" data-snowcolor="#fafafa">Považská Bystrica</a>
+      </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+
+      <div class="page-content">
+        <iframe id="iframe_container"is="x-frame-bypass" src="https://spspb.edupage.org/" title="Website container"></iframe>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+  <script src="../../assets/js/core.main.js"></script>
+  <script src="../../assets/js/module.showCurrentClass.js"></script>
+  <script defer src="../../assets/js/ui.dashboard.js"></script>
+  <script defer src="../../libs/material-design-lite@1.3.0/material.min.js"></script>
+</body>
+
+</html>

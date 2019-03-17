@@ -1,0 +1,77 @@
+html,
+body {
+    background-color: #FAFAFA;
+}
+
+.quick_action_bar {
+    color: #EEEEEE;
+    background-color: #EEEEEE !important;
+    opacity: 0.6;
+}
+
+.quick_action_bar,
+.quick_action_bar>.mdl-navigation__link {
+    color: #212121 !important;
+}
+
+.spacer-8px {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.btn_spacer-8px {
+    margin: 8px;
+}
+
+.form_spacer-16px {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.icon_button_align-fix {
+    margin-right: 4px;
+    padding-bottom: 4px;
+}
+
+.icon_header_align-fix {
+    margin-right: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.option_card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box
+}
+
+.fix_full_width {
+    width: 100% !important;
+}
+
+.blur {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+}
+
+#dialog_settingsImport {
+    width: 400px !important;
+}
+
+.mdl-menu {
+    position: absolute !important;
+    z-index: auto;
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="sk-SK">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libs/material-design-lite@1.3.0/material.min.css">
+    <link rel="stylesheet" href="../../libs/material-design-icons@3.0.1/material-icons.css">
+    <link rel="stylesheet" href="../../assets/css/ui.settings.css">
+    <title>Nastavenia</title>
+</head>
+
+<body>
+
+    <!-------------------------------------------------------------------->
+    <!--                         Header                                 -->
+    <!-------------------------------------------------------------------->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <div class="mdl-layout__header mdl-layout__header--seamed mdl-shadow--8dp">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Nastavenia</span>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------->
+        <!--                        Quick actions bar                       -->
+        <!-------------------------------------------------------------------->
+
+        <div class="quick_action_bar uppercase mdl-layout--large-screen-only">
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" id="quickActions_back"
+                    onclick="goBack()">
+                    <i class="material-icons icon_button_align-fix">arrow_back</i>Späť
+                </button>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" id="quickActions_save"
+                    onclick="saveSettings()">
+                    <i class="material-icons icon_button_align-fix">save</i>Uložiť
+                </button>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" id="quickActions_saveAndClose"
+                    onclick="saveSettingsAndGoBack()">
+                    <i class="material-icons icon_button_align-fix">done_all</i>Uložiť a zatvoriť
+                </button>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" id="quickActions_backRestore"
+                    onclick="document.getElementById('dialog_settingsManagement').showModal();">
+                    <i class="material-icons icon_button_align-fix">settings_backup_restore</i>Záloha a obnova
+                    nastavení
+                </button>
+            </nav>
+        </div>
+
+        <!-------------------------------------------------------------------->
+        <!--                               Drawer                           -->
+        <!-------------------------------------------------------------------->
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Nastavenia</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link uppercase" href="javascript:history.back();">
+                    <i class="material-icons icon_button_align-fix">arrow_back</i>Späť
+                </a>
+                <a class="mdl-navigation__link uppercase" href="javascript:saveSettings('1');">
+                    <i class="material-icons icon_button_align-fix">save</i>Uložiť
+                </a>
+                <a class="mdl-navigation__link uppercase" href="javascript:saveSettingsAndGoBack();">
+                    <i class="material-icons icon_button_align-fix">done_all</i>Uložiť a zatvoriť
+                </a>
+                <a class="mdl-navigation__link uppercase" id="drawer_backRestore">
+                    <i class="material-icons icon_button_align-fix">settings_backup_restore</i>Záloha a obnova
+                    nastavení
+                </a>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="drawer_backRestore">
+                    <li class="mdl-menu__item">Some Action</li>
+                    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+                    <li disabled class="mdl-menu__item">Disabled Action</li>
+                    <li class="mdl-menu__item">Yet Another Action</li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-------------------------------------------------------------------->
+        <!--                              Content                           -->
+        <!-------------------------------------------------------------------->
+
+        <main class="mdl-layout__content">
+
+            <!-------------------------------------------------------------------->
+            <!--                               Tooltips                         -->
+            <!-------------------------------------------------------------------->
+
+            <div class="mdl-tooltip mdl-tooltip--large" for="quickActions_back">Prejsť na predchádzajúcu stránku</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="quickActions_save">Uložiť</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="quickActions_saveAndClose">Uložiť prejsť na predchádzajúcu
+                stránku</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="quickActions_backRestore">Zálohovať a obnoviť nastavenia</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_studentTracker">Zistite kde sa žiaci najčasteješie
+                zdržiavajú v škole</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for=""></div>
+            <div class="mdl-tooltip mdl-tooltip--large" for=""></div>
+            <div class="mdl-tooltip mdl-tooltip--large" for=""></div>
+            <div class="mdl-tooltip mdl-tooltip--large" for=""></div>
+
+            <!-------------------------------------------------------------------->
+            <!--                             Content                            -->
+            <!-------------------------------------------------------------------->
+
+            <div class="page-content">
+
+                <!-------------------------------------------------------------------->
+                <!--                 Settings management dialog                     -->
+                <!-------------------------------------------------------------------->
+
+                <dialog class="mdl-dialog" id="dialog_settingsManagement">
+                    <h4 class="mdl-dialog__title">Vyberte akciu</h4>
+                    <div class="mdl-dialog__content">
+                        <p>
+                            // TODO: Pridať popis funkcie
+                        </p>
+                        <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix mdl-button--accent"
+                            onclick="exportSettings();">Zálohovať</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix" onclick="">Obnoviť</button>
+                    </div>
+                </dialog>
+
+                <!-------------------------------------------------------------------->
+                <!--                     Settings import dialog                     -->
+                <!-------------------------------------------------------------------->
+
+                <dialog class="mdl-dialog" id="dialog_settingsImport">
+                    <h4 class="mdl-dialog__title">Obnova nastavení</h4>
+                    <div class="mdl-dialog__content">
+                        <p>
+                            // TODO: Pridať popis funkcie
+                        </p>
+                        <textarea class="mdl-textfield__input" type="text" rows="5" id="textarea_importSettings"></textarea>
+                    </div>
+                    <div class="mdl-dialog__actions--full-width">
+                        <button type="button" class="mdl-button" onclick="document.getElementById('dialog_settingsImport').close();">Zrušiť</button>
+                        <button type="button" class="mdl-button" disabled>Spustiť import</button>
+                    </div>
+                </dialog>
+
+                <!-------------------------------------------------------------------->
+                <!--                         Snackbar                               -->
+                <!-------------------------------------------------------------------->
+
+                <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+                    <div class="mdl-snackbar__text"></div>
+                    <button type="button" class="mdl-snackbar__action"></button>
+                </div>
+
+                <!-------------------------------------------------------------------->
+                <!--                    Content / grid / left side                  -->
+                <!-------------------------------------------------------------------->
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col">
+
+                        <!-------------------------------------------------------------------->
+                        <!--            Content / grid / left side / school name            -->
+                        <!-------------------------------------------------------------------->
+
+                        <h4><i class="material-icons icon_header_align-fix">school</i><span class="spacer"></span>Údaje
+                            o škole</h4>
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Názov</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="input_schoolName">
+                                    <label class="mdl-textfield__label" for="input_schoolName">Názov školy</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------------------------->
+                        <!--          Content / grid / left side / edupage server           -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Edupage server</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="input_edupageServer">
+                                        <label class="mdl-textfield__label" for="input_edupageServer">Adresa edupage
+                                            serveru</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------------------------->
+                        <!--          Content / grid / left side / additional pages         -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Zdroj údajov (1/3)</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="input_additionalPage1">
+                                        <label class="mdl-textfield__label" for="input_additionalPage1"></label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Zdroj údajov (2/3)</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="input_additionalPage2">
+                                        <label class="mdl-textfield__label" for="input_additionalPage2"></label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Zdroj údajov (1/3)</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="input_additionalPage3">
+                                        <label class="mdl-textfield__label" for="input_additionalPage3"></label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------------------------->
+                        <!--             Content / grid / left side / class times           -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Zvonenie na hodiny</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6>Používa sa predvolené</h6><span>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button">
+                                        <i class="material-icons icon_header_align-fix">open_in_new</i>Otvoriť</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-------------------------------------------------------------------->
+                    <!--                 Content / grid / right side                    -->
+                    <!-------------------------------------------------------------------->
+
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h4><i class="material-icons icon_header_align-fix">info</i><span class="spacer"></span>Aplikácia</h4>
+
+                        <!-------------------------------------------------------------------->
+                        <!--          Content / grid / right side / application info        -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Verzia aplikácie</b></h6>
+                                <h6><b>Autor</b></h6>
+                                <h6><b>Automatické ukladanie nastavení</b></h6>
+                                <h6><b>Riešenie problémov</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6>0.1.0-alpha</h6>
+                                <h6>Tomáš Tomovčík</h6>
+                                <label for="switch1" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+                                    <input type="checkbox" id="switch1" class="mdl-switch__input" disabled>
+                                </label>
+                                <h6>Shit happens, you know</h6><span>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix mdl-button--accent"
+                                        onclick="navigate('wiki')">Wiki</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix">Nahlásiť
+                                        chybu</button>
+                                    <!-- TODO: (6): Pridať wiki kokotiny -->
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------------------------->
+                        <!--          Content / grid / right side / student tracker         -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6 id="header_studentTracker"><b>Sledovanie pohybu žiakov</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6>Táto funkcia je vo vývoji</h6>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------------------------->
+                        <!--             Content / grid / right side / statistics           -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6 id="header_studentTracker"><b>Štatistiky</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6>Táto funkcia je vo vývoji</h6>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------------------------->
+                        <!--          Content / grid / right side / e-lock connect          -->
+                        <!-------------------------------------------------------------------->
+
+                        <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6><b>Prepojenie s elektronickým zámkom</b></h6>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <h6>Táto funkcia je vo vývoji</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../assets/js/core.main.js"></script>
+    <script src="../../assets/js/ui.settings.js"></script>
+    <script async src="../../libs/material-design-lite@1.3.0/material.min.js"></script>
+</body>
+
+</html>
