@@ -1,8 +1,6 @@
 // TODO: Add login handler in core
 
 /**
- * Logs some shit into console.
- * 
  * @param {String} fun - Function that calls consoleHelper
  * @param {String} event - What happened
  * @param {String} status - Status, duh
@@ -24,8 +22,6 @@ function consoleHelper(fun, event, status, msg, name, value) {
 }
 
 /**
- * Gets current date and and time
- * 
  * @returns {Array} Array with DD:MM:YYY hh:mm:ss
  */
 function getCurrentDateTime() {
@@ -58,8 +54,6 @@ function showCurrentDateTimeInMainUI(element) {
 };
 
 /**
- * Beautifies JSON into nice string.
- * 
  * @param {String} sourceElement Element to prettify text inside of
  */
 function prettifyJSON(sourceElement) {
@@ -85,7 +79,6 @@ function prettifyLTTValues(i) {
 }
 
 /**
- * 
  * @param {String} action What to do (get, set, qset, reset, export, import)
  * @param {(String|Number)} name Name to be used of the saved value
  * @param {(String|Number)} value Value to be saved if action == "store"
@@ -138,8 +131,8 @@ function settingsManager(action, name, value, dataSource, importModal) {
         case (action == "import"):
             let data = JSON.parse(document.getElementById(dataSource).value);
             let modalToClose = document.getElementById(importModal);
-            Object.keys(data).forEach(function (k) {
-                localStorage.setItem(k, data[k]);
+            Object.keys(data).forEach(function (key) {
+                localStorage.setItem(key, data[key]);
             });
             $(modalToClose).modal('hide');
             consoleHelper(
@@ -153,5 +146,16 @@ function settingsManager(action, name, value, dataSource, importModal) {
             break;
         default:
             return;
+    }
+}
+
+/**
+ * @param {*} state - Starts easter egg manager if any parameter is provided
+ */
+function easterEggManager(state) {
+    if (state) {
+        console.log('^(;,;)^');
+    } else {
+        return;
     }
 }
