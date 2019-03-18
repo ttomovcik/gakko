@@ -67,16 +67,6 @@
                 <a class="mdl-navigation__link uppercase" href="javascript:saveSettingsAndGoBack();">
                     <i class="material-icons icon_button_align-fix">done_all</i>Uložiť a zatvoriť
                 </a>
-                <a class="mdl-navigation__link uppercase" id="drawer_backRestore">
-                    <i class="material-icons icon_button_align-fix">settings_backup_restore</i>Záloha a obnova
-                    nastavení
-                </a>
-                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="drawer_backRestore">
-                    <li class="mdl-menu__item">Some Action</li>
-                    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
-                    <li disabled class="mdl-menu__item">Disabled Action</li>
-                    <li class="mdl-menu__item">Yet Another Action</li>
-                </ul>
             </nav>
         </div>
 
@@ -97,6 +87,26 @@
             <div class="mdl-tooltip mdl-tooltip--large" for="quickActions_backRestore">Zálohovať a obnoviť nastavenia</div>
             <div class="mdl-tooltip mdl-tooltip--large" for="header_studentTracker">Zistite kde sa žiaci najčasteješie
                 zdržiavajú v škole</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_schoolName">Názov školy. Bude použitý v záhlaví
+                nástenky</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_edupageServer">Primárny server odkiaľ sa budú
+                sťahovať informácie</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_additionalPages1">Dodatočná stránka, ktorá sa
+                zobrazí na nástenke</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_additionalPages2">Dodatočná stránka, ktorá sa
+                zobrazí na nástenke</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_additionalPages3">Dodatočná stránka, ktorá sa
+                zobrazí na nástenke</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_pageInterval">Koľko sa zobrazí každá stránka na
+                nástenke</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_classRinging">Trvanie vyučovacích hodín a prestávok</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_statistics">Štatistiky o používaní, pohybe žiakov,
+                dochádzke a aktivite zámkov</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_studentTracker">Zobrazí miesta kde sa najčastejšie
+                zdržiavajú žiaci</div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="header_e-lock">Prepojenie s elektronickým zámkom na NFC
+                tagy. Umožní na diaľku spravovať zámky a sledovať aktivitu</div>
+
 
             <!-------------------------------------------------------------------->
             <!--                             Content                            -->
@@ -114,9 +124,11 @@
                         <p>
                             // TODO: Pridať popis funkcie
                         </p>
+                        <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix" close>Zatvoriť</button>
                         <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix mdl-button--accent"
                             onclick="exportSettings();">Zálohovať</button>
                         <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix" onclick="">Obnoviť</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix" onclick="">Reset</button>
                     </div>
                 </dialog>
 
@@ -158,11 +170,11 @@
                         <!--            Content / grid / left side / school name            -->
                         <!-------------------------------------------------------------------->
 
-                        <h4><i class="material-icons icon_header_align-fix">school</i><span class="spacer"></span>Údaje
-                            o škole</h4>
+                        <h4><i class="material-icons icon_header_align-fix">school</i><span class="spacer"></span><b>Údaje
+                                o škole</b></h4>
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Názov</b></h6>
+                                <h6 id="header_schoolName"><b>Názov</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -178,7 +190,7 @@
 
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Edupage server</b></h6>
+                                <h6 id="header_edupageServer"><b>Edupage server</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <form action="#">
@@ -197,35 +209,38 @@
 
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Zdroj údajov (1/3)</b></h6>
+                                <h6 id="header_additionalPages1"><b>Zdroj údajov (1/3)</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <form action="#">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="input_additionalPage1">
-                                        <label class="mdl-textfield__label" for="input_additionalPage1"></label>
+                                        <label class="mdl-textfield__label" for="input_additionalPage1">Adresa
+                                            (www.ayy-lmao.com)</label>
                                     </div>
                                 </form>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Zdroj údajov (2/3)</b></h6>
+                                <h6 id="header_additionalPages2"><b>Zdroj údajov (2/3)</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <form action="#">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="input_additionalPage2">
-                                        <label class="mdl-textfield__label" for="input_additionalPage2"></label>
+                                        <label class="mdl-textfield__label" for="input_additionalPage2">Adresa
+                                            (www.ayy-lmao.com)</label>
                                     </div>
                                 </form>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Zdroj údajov (1/3)</b></h6>
+                                <h6 id="header_additionalPages3"><b>Zdroj údajov (1/3)</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <form action="#">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="input_additionalPage3">
-                                        <label class="mdl-textfield__label" for="input_additionalPage3"></label>
+                                        <label class="mdl-textfield__label" for="input_additionalPage3">Adresa
+                                            (www.ayy-lmao.com)</label>
                                     </div>
                                 </form>
                             </div>
@@ -237,10 +252,17 @@
 
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Interval zobrazovania stánok</b></h6>
+                                <h6 id="header_pageInterval"><b>Interval zobrazovania stánok</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6>10 sekúnd</h6>
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="input_pageInterval">
+                                        <label class="mdl-textfield__label" for="input_pageInterval">Počet sekúnd</label>
+                                        <span class="mdl-textfield__error">Toto nevyzerá ako číslo</span>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -250,12 +272,12 @@
 
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Zvonenie na hodiny</b></h6>
+                                <h6 id="header_classRinging"><b>Zvonenie na hodiny</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <h6>Používa sa predvolené</h6><span>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button">
-                                        <i class="material-icons icon_header_align-fix">open_in_new</i>Otvoriť</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--accent mdl-button">
+                                        <i class="material-icons icon_header_align-fix">access_time</i>Upraviť</button>
                                 </span>
                             </div>
                         </div>
@@ -266,7 +288,7 @@
                     <!-------------------------------------------------------------------->
 
                     <div class="mdl-cell mdl-cell--6-col">
-                        <h4><i class="material-icons icon_header_align-fix">info</i><span class="spacer"></span>Aplikácia</h4>
+                        <h4><i class="material-icons icon_header_align-fix">info</i><span class="spacer"></span><b>Aplikácia</b></h4>
 
                         <!-------------------------------------------------------------------->
                         <!--          Content / grid / right side / application info        -->
@@ -275,12 +297,14 @@
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
                                 <h6><b>Verzia aplikácie</b></h6>
+                                <h6><b>Licencia</b></h6>
                                 <h6><b>Autor</b></h6>
                                 <h6><b>Automatické ukladanie nastavení</b></h6>
                                 <h6><b>Riešenie problémov</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <h6>0.1.0-alpha</h6>
+                                <h6>Apache 2.0</h6>
                                 <h6>Tomáš Tomovčík</h6>
                                 <label for="switch1" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
                                     <input type="checkbox" id="switch1" class="mdl-switch__input" disabled>
@@ -288,7 +312,7 @@
                                 <h6>Shit happens, you know</h6><span>
                                     <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix mdl-button--accent"
                                         onclick="navigate('wiki')">Wiki</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised icon_button_align-fix">Nahlásiť
+                                    <button class="mdl-button mdl-js-button mdl-button icon_button_align-fix">Nahlásiť
                                         chybu</button>
                                     <!-- TODO: (6): Pridať wiki kokotiny -->
                                 </span>
@@ -304,7 +328,10 @@
                                 <h6 id="header_studentTracker"><b>Sledovanie pohybu žiakov</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6>Táto funkcia je vo vývoji</h6>
+                                <h6>Nenastavené</h6><span>
+                                    <button class="mdl-button mdl-js-button mdl-button--accent mdl-button">
+                                        <i class="material-icons icon_header_align-fix">track_changes</i>Nastaviť</button>
+                                </span>
                             </div>
                         </div>
 
@@ -314,10 +341,12 @@
 
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6 id="header_studentTracker"><b>Štatistiky</b></h6>
+                                <h6 id="header_statistics"><b>Štatistiky</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6>Táto funkcia je vo vývoji</h6>
+                                <h6>Štatistiky sú nedostupné v tejto verzii</h6>
+                                <button class="mdl-button mdl-js-button mdl-button--accent mdl-button">
+                                    <i class="material-icons icon_header_align-fix">timeline</i>Zobraziť štatistiky</button>
                             </div>
                         </div>
 
@@ -327,10 +356,14 @@
 
                         <div class="mdl-grid option_card mdl-shadow--2dp form_spacer-16px">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6><b>Prepojenie s elektronickým zámkom</b></h6>
+                                <h6 id="header_e-lock"><b>Prepojenie s elektronickým zámkom</b></h6>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <h6>Táto funkcia je vo vývoji</h6>
+                                <h6>Nenastavené</h6><span>
+                                    <button class="mdl-button mdl-js-button mdl-button--accent mdl-button">
+                                        <i class="material-icons icon_header_align-fix">screen_lock_rotation</i>Pridať
+                                        zámky</button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -338,7 +371,6 @@
             </div>
         </main>
     </div>
-
     <script src="../../assets/js/core.main.js"></script>
     <script src="../../assets/js/ui.settings.js"></script>
     <script async src="../../libs/material-design-lite@1.3.0/material.min.js"></script>

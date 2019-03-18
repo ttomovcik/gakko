@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.btn-white {
+    color: #FAFAFA !important;
+}
+
+.icon_button_align-fix {
+    margin-right: 4px;
+    padding-bottom: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mdl-layout__drawer,
+.mdl-layout__drawer>.mdl-navigation_link {
+    background-color: #212121 !important;
+    color: #FAFAFA !important;
+    border-right: 1px solid #000000 !important;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #000000 !important;
+}
+
+.mdl-layout__drawer-button,
+.mdl-layout__drawer-button>i {
+    color: #FAFAFA;
+}
+
+@media only screen and (min-width: 1025px) {
+    .mdl-layout__content {
+        margin-top: 128px;
+    }
+} 
