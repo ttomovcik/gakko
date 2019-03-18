@@ -16,26 +16,6 @@ function goBack() {
         'see ya later');
 }
 
-/**
- * ? I should prolly do something about this
- * TODO: Create global routing shit. Too lazy to use Angular
- * @param {x} x What link to open
- */
-function navigate(x) {
-    this.x = x;
-    switch (true) {
-        case (this.x = 'wiki'):
-            window.location.href = 'https://github.com/ttomovcik/gakko/wiki'
-            break;
-        case (this.x = 'bugreport'):
-            window.location.href = 'https://github.com/ttomovcik/gakko/issues/new'
-            break;
-        default:
-            break
-
-    }
-}
-
 function saveSettings() {
     settingsManager('set', 'schoolname', input_schoolName.value);
     settingsManager('set', 'edupageServer', input_edupageServer.value);

@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 * {
     margin: 0px;
     padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .btn-white {
@@ -35,4 +47,8 @@
     .mdl-layout__content {
         margin-top: 128px;
     }
-} 
+
+    #hero_greeter>h1 {
+        font-size: 500%
+    }
+}

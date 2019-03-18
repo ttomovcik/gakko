@@ -1,5 +1,3 @@
-// TODO: Add login handler in core
-
 /**
  * @param {String} fun - Function that calls consoleHelper
  * @param {String} event - What happened
@@ -76,6 +74,15 @@ function prettifyLTTValues(i) {
         i = "0" + i
     };
     return i
+}
+
+/**
+ * Opens webpage in new tab
+ * 
+ * @param {String} url - URL of website to open
+ */
+function dora(url) {
+    window.open(url, "_self");
 }
 
 /**

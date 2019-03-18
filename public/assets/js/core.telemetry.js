@@ -7,17 +7,19 @@ const firebaseConfig = {
     messagingSenderId: "959643284605"
 };
 
-(function () {
-    // Initialize Google Firebase
-    firebase.initializeApp(firebaseConfig);
+// Initialize Google Firebase
+firebase.initializeApp(firebaseConfig);
 
-    // Initialize Google Analytics
-    window.dataLayer = window.dataLayer || [];
+// Initialize Google Analytics
+window.dataLayer = window.dataLayer || [];
 
-    // Push dataLayer, something something. Idk.
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-133294265-1');
+// Push dataLayer, something something. Idk.
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'UA-133294265-1');
+
+Sentry.init({
+    dsn: 'https://fc1c3e73696a43408b16b88c4eab2cf5@sentry.io/1418165'
 });
