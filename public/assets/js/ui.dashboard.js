@@ -1,7 +1,7 @@
 const defaults_appName = "Gakkō";
 const defaults_alphaSuperScript = "<sup>α</sup>";
-const ui_header_appTitle = document.getElementById('appTitle');
 const stored_school_schoolName = settingsManager("get", "schoolname");
+let ui_header_appTitle = document.getElementById('appTitle');
 
 if (stored_school_schoolName) {
     ui_header_appTitle.innerHTML = stored_school_schoolName;
