@@ -22,3 +22,4 @@ showCurrentDateTimeInMainUI('clock');
 
 // ? Prolly change the constructor since the dashboard won't change much.
 new showCurrentClassState('ccIcon', 'ccName', 'ucName');
+document.body.onload(loadWebsiteIntoContainer());

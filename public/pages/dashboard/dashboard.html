@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../../assets/css/ui.dashboard.css">
-  <link rel="stylesheet" href="../../libs/material-design-lite@1.3.0/material.min.css">
-  <link rel="stylesheet" href="../../libs/material-design-icons@3.0.1/material-icons.css">
-  <title>Nástenka</title>
+<html lang="sk-SK" <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../../libs/material-design-lite@1.3.0/material.min.css">
+<link rel="stylesheet" href="../../libs/material-design-icons@3.0.1/material-icons.css">
+<link rel="stylesheet" href="../../assets/css/ui.dashboard.css">
+<link rel="stylesheet" href="../../assets/css/anim.body.fadeIn.css">
+<title>Nástenka</title>
 </head>
 
 <body>
@@ -66,18 +65,18 @@
 
     <main class="mdl-layout__content">
 
-      <div class="page-content">
-        <iframe id="iframe_container"is="x-frame-bypass" src="https://spspb.edupage.org/" title="Website container"></iframe>
+      <div class="page-content" id="content_main">
+        <iframe id="iframe_container" src="" title="Website container"></iframe>
       </div>
 
     </main>
   </div>
 
-  <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
   <script src="../../assets/js/core.main.js"></script>
   <script src="../../assets/js/module.showCurrentClass.js"></script>
+  <script src="../../assets/js/module.pageArrayLoader.js"></script>
   <script defer src="../../assets/js/ui.dashboard.js"></script>
-  <script defer src="../../libs/material-design-lite@1.3.0/material.min.js"></script>
+  <script async src="../../libs/material-design-lite@1.3.0/material.min.js"></script>
 </body>
 
 </html>
