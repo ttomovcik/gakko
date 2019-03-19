@@ -57,28 +57,18 @@ function exportSettings() {
 
 function populatePlaceholders() {
     if (storedSettingsArray[0]) {
-        labelsArray[0].innerHTML =
-            '<sub><i class="material-icons icon_button_align label_icon_fix">settings_backup_restore</i></sub>' +
-            storedSettingsArray[0];
+        labelsArray[0].textContent = storedSettingsArray[0];
     }
     if (storedSettingsArray[1]) {
-        labelsArray[1].innerHTML =
-            '<sub><i class="material-icons icon_button_align label_icon_fix">settings_backup_restore</i></sub>' +
-            storedSettingsArray[1];
+        labelsArray[1].textContent = storedSettingsArray[1];
     }
     if (storedSettingsArray[2]) {
-        labelsArray[2].innerHTML =
-            '<sub><i class="material-icons icon_button_align label_icon_fix">settings_backup_restore</i></sub>' +
-            storedSettingsArray[2];
+        labelsArray[2].textContent = storedSettingsArray[2];
     }
     if (storedSettingsArray[3]) {
-        labelsArray[3].innerHTML =
-            '<sub><i class="material-icons icon_button_align label_icon_fix">settings_backup_restore</i></sub>' +
-            storedSettingsArray[3];
+        labelsArray[3].textContent = storedSettingsArray[3];
     }
     if (storedSettingsArray[4]) {
-        labelsArray[4].innerHTML = 
-        '<sub><i class="material-icons icon_button_align label_icon_fix">settings_backup_restore</i></sub>' +
-            storedSettingsArray[4];
+        labelsArray[4].textContent = storedSettingsArray[4];
     }
 }

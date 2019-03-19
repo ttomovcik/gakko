@@ -42,7 +42,7 @@ function getCurrentDateTime() {
  */
 function showCurrentDateTimeInMainUI(element) {
     setInterval(function () {
-        document.getElementById(element).innerHTML = getCurrentDateTime()[0] + '.' +
+        document.getElementById(element).textContent = getCurrentDateTime()[0] + '.' +
             getCurrentDateTime()[1] + '.' +
             getCurrentDateTime()[2] + ' ' +
             getCurrentDateTime()[3] + ':' +

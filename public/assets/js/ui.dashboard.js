@@ -4,7 +4,7 @@ const stored_school_schoolName = settingsManager("get", "schoolname");
 let ui_header_appTitle = document.getElementById('appTitle');
 
 if (stored_school_schoolName) {
-    ui_header_appTitle.innerHTML = stored_school_schoolName;
+    ui_header_appTitle.textContent = stored_school_schoolName;
 } else {
     ui_header_appTitle = defaults_appName + defaults_alphaSuperScript;
 }
