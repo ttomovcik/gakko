@@ -25,16 +25,23 @@
 
 <body>
     <!-- TODO: Nahradiť s login form -->
-    <dialog class="mdl-dialog">
-        <h4 class="mdl-dialog__title">Would you like to succ?</h4>
+    <dialog class="mdl-dialog text-center">
+        <h4 class="mdl-dialog__title">Prihásenie</h4>
         <div class="mdl-dialog__content">
-            <p>
-                This might be an interesting experience for you. Do you want to do so?
-            </p>
+            <p>Pred použitím všetkých funkcii je potrebné sa prihlásiť pomocou vlastných údajov alebo Google účtu</p>
+            <hr>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="input_mail">
+                <label class="mdl-textfield__label" for="input_mail">Mailová adresa</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="input_pwd">
+                <label class="mdl-textfield__label" for="input_pwd">Heslo</label>
+            </div>
         </div>
         <div class="mdl-dialog__actions">
-            <button type="button" class="mdl-button">yos</button>
-            <button type="button" class="mdl-button close">naow</button>
+            <button type="button" class="mdl-button">Prihlásiť sa</button>
+            <button type="button" class="mdl-button">Vytvoriť účet</button>
         </div>
     </dialog>
 
@@ -44,14 +51,18 @@
                 <span class="mdl-layout-title mdl-badge" data-badge="α">Gakkō</span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation mdl-layout--large-screen-only" id="navigation_buttons">
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" onclick="dora('https://github.com/ttomovcik/gakko/');">Github
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px"
+                        onclick="dora('https://github.com/ttomovcik/gakko/');">Github
                     </button>
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" onclick="dora('https://github.com/ttomovcik/gakko/wiki');">Viac
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px"
+                        onclick="dora('https://github.com/ttomovcik/gakko/wiki');">Viac
                         informácií
                     </button>
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px" onclick="dora('https://gakko-pwa.firebaseapp.com/pages/dashboard/dashboard.html');">Demo
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn_spacer-8px"
+                        onclick="dora('./pages/dashboard/dashboard.html');">Demo
                     </button>
-                    <button id="show-dialog" class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect btn_spacer-8px">
+                    <button id="show-dialog"
+                        class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect btn_spacer-8px">
                         <i class="material-icons icon_button_align-fix">person_outline</i>Prihásenie
                     </button>
                 </nav>
@@ -72,7 +83,8 @@
                     <h1>Gakkō<br>
                         <h6 style="margin-top: -16px;">Moderná e-nástenka a informačný systém pre školy zdarma</h6>
                     </h1>
-                    <button id="show-dialog" class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect btn_spacer-8px"
+                    <button id="show-dialog"
+                        class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect btn_spacer-8px"
                         onclick="dora('https://github.com/ttomovcik/gakko/wiki');">
                         <i class="material-icons icon_button_align-fix">help_outline</i>Zistiť viac
                     </button>
@@ -95,17 +107,22 @@
         </ul>
     </div>
 
-    <a href="#" onclick="document.cookie='cookiebar=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/'; setupCookieBar(); return false;">Click
+    <a href="#"
+        onclick="document.cookie='cookiebar=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/'; setupCookieBar(); return false;">Click
         here to revoke the Cookie consent</a>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=white&tracking=1&thirdparty=1&always=1&scrolling=1"></script>
-    <script async src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133294265-1"></script>
-    <script async src="https://browser.sentry-cdn.com/4.6.4/bundle.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=white&tracking=1&thirdparty=1&always=1&scrolling=1">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-133294265-1"></script>
+    <script defer src="./assets/js/core.firebase.js"></script>
     <script async src="./assets/js/core.main.js"></script>
     <script async src="./assets/js/ui.index.js"></script>
-    <script async src="./libs/material-design-lite@1.3.0/material.min.js"></script>
-    <script defer src="./assets/js/core.telemetry.js"></script>
+    <script defer src="./libs/material-design-lite@1.3.0/material.min.js"></script>
+
 </body>
 
 </html>

@@ -39,3 +39,7 @@ p {
         font-size: 500%
     }
 }
+
+.mdl-dialog {
+    width: 386px;
+}

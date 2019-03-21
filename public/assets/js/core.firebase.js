@@ -1,14 +1,13 @@
 const firebaseConfig = {
     apiKey: "AIzaSyBJ2xe48UwTt0gwrFItAwGyJoq9-wuPAOU",
-    authDomain: "gakko-pwa.firebaseapp.com",
-    databaseURL: "https://gakko-pwa.firebaseio.com",
-    projectId: "gakko-pwa",
-    storageBucket: "gakko-pwa.appspot.com",
+    authDomain: "gakko-webapp.firebaseapp.com",
+    databaseURL: "https://gakko-webapp.firebaseio.com",
+    projectId: "gakko-webapp",
+    storageBucket: "gakko-webapp.appspot.com",
     messagingSenderId: "959643284605"
 };
-
-// Initialize Google Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseDatabase = firebase.database();
+const firebaseAuth = firebase.auth();
 
 // Initialize Google Analytics
 window.dataLayer = window.dataLayer || [];
@@ -20,6 +19,5 @@ function gtag() {
 gtag('js', new Date());
 gtag('config', 'UA-133294265-1');
 
-Sentry.init({
-    dsn: 'https://fc1c3e73696a43408b16b88c4eab2cf5@sentry.io/1418165'
-});
+// Initialize Google Firebase
+firebase.initializeApp(firebaseConfig);

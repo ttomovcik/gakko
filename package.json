@@ -1,0 +1,34 @@
+{
+    "name": "gakko",
+    "displayName": "Gakkō - moderná e-nástenka a informačný systém pre školy",
+    "description": "Moderná e-nástenka a informačný systém pre školy",
+    "version": "0.1.0",
+    "keywords": [
+        "dashboard",
+        "school"
+    ],
+    "author": {
+        "name": "Tomáš Tomovčík",
+        "email": "tomovcik.tomas@gmail.com"
+    },
+    "maintainers": [{
+        "name": "Tomáš Tomovčík",
+        "email": "tomovcik.tomas@gmail.com",
+        "web": ""
+    }],
+    "demos": [
+        "https://gakko-webapp.firebaseapp.com"
+    ],
+    "bugs": {
+        "web": "https://github.com/ttomovcik/gakko/issues"
+    },
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/ttomovcik/gakko.git"
+    }],
+    "licenses": [{
+        "name": "Apache-2.0",
+        "url": "https://github.com/ttomovcik/gakko/LICENSE.md"
+    }],
+    "homepage": "https://github.com/ttomovcik/gakko"
+}

@@ -78,10 +78,12 @@ function prettifyLTTValues(i) {
 
 /**
  * Opens webpage in new tab
+ * "explorer"
  * 
  * @param {String} url - URL of website to open
  */
 function dora(url) {
+    // There she goes
     window.open(url, "_self");
 }
 
