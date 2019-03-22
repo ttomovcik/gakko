@@ -1,3 +1,18 @@
+// ! IMPORTANT SHIT BELOW ˇˇ
+// TODO: Zmeniť API pri prod. verzií
+// ! IMPORTANT SHIT ABOVE ^^
+const firebaseConfig = {
+    apiKey: "AIzaSyCOh3GXwzisRdFuKJjJGZy3q9T8jafWiMU",
+    authDomain: "gakko-webapp.firebaseapp.com",
+    databaseURL: "https://gakko-webapp.firebaseio.com",
+    projectId: "gakko-webapp",
+    storageBucket: "gakko-webapp.appspot.com",
+    messagingSenderId: "31535272637"
+};
+firebase.initializeApp(firebaseConfig);
+const firebaseDatabase = firebase.firestore();
+const firebaseAuth = firebase.auth();
+
 /**
  * @param {String} fun - Function that calls consoleHelper
  * @param {String} event - What happened
@@ -5,6 +20,8 @@
  * @param {String} msg - Additional message to be logged
  * @param {String} name - In case of localStorage, name of the setting
  * @param {String} value - localStorage -> value of the saved setting
+ * ? Eh
+ * TODO: Nahradiť novým helperom
  */
 function consoleHelper(fun, event, status, msg, name, value) {
     console.log(
@@ -71,35 +88,35 @@ function prettifyJSON(sourceElement) {
  */
 function prettifyLTTValues(i) {
     if (i < 10) {
-        i = "0" + i
+        i = '0' + i
     };
     return i
 }
 
 /**
  * Opens webpage in new tab
- * "explorer"
+ * 'explorer'
  * 
  * @param {String} url - URL of website to open
  */
 function dora(url) {
     // There she goes
-    window.open(url, "_self");
+    window.open(url, '_self');
 }
 
 /**
  * @param {String} action What to do (get, set, qset, reset, export, import)
  * @param {(String|Number)} name Name to be used of the saved value
- * @param {(String|Number)} value Value to be saved if action == "store"
+ * @param {(String|Number)} value Value to be saved if action == 'store'
  * @param {String} dataSource Source element ID to get data from
  * @param {String} importModal Target modal ID to be hidden after import
  * @see consoleHelper
  */
 function settingsManager(action, name, value, dataSource, importModal) {
     switch (true) {
-        case (action == "get"):
+        case (action == 'get'):
             return localStorage.getItem(name);
-        case (action == "set"):
+        case (action == 'set'):
             if (value) {
                 localStorage.setItem(name, value);
                 consoleHelper(
@@ -111,13 +128,13 @@ function settingsManager(action, name, value, dataSource, importModal) {
                     value);
             }
             break;
-        case (action == "qset"):
+        case (action == 'qset'):
             if (value) {
                 localStorage.setItem(name, value);
                 // console.log('^(;,;)^');
             }
             break;
-        case (action == "reset"):
+        case (action == 'reset'):
             localStorage.clear();
             consoleHelper(
                 'settingsManager.reset',
@@ -126,7 +143,7 @@ function settingsManager(action, name, value, dataSource, importModal) {
                 'all items have been cleared'
             );
             break;
-        case (action == "export"):
+        case (action == 'export'):
             navigator.clipboard.writeText(JSON.stringify(localStorage));
             consoleHelper(
                 'settingsManager.export',
@@ -137,7 +154,7 @@ function settingsManager(action, name, value, dataSource, importModal) {
                 localStorage
             );
             break;
-        case (action == "import"):
+        case (action == 'import'):
             let data = JSON.parse(document.getElementById(dataSource).value);
             let modalToClose = document.getElementById(importModal);
             Object.keys(data).forEach(function (key) {
@@ -168,3 +185,11 @@ function easterEggManager(state) {
         return;
     }
 }
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'UA-133294265-1');

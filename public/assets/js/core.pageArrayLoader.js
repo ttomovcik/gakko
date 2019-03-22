@@ -1,8 +1,8 @@
-/**
- * Load website into iframe container with CORS bypass
- * 
- */
-
+const corsProxy = [
+    'https://cors.io/?',
+    'https://jsonp.afeld.me/?url=',
+    'https://cors-anywhere.herokuapp.com/'
+]
 let pageArray = [
     settingsManager('get', 'edupageServer'),
     settingsManager('get', 'additionalPage1'),
@@ -11,14 +11,9 @@ let pageArray = [
 ].filter(function (item) {
     return item;
 });
-const corsProxy = [
-    'https://cors.io/?',
-    'https://jsonp.afeld.me/?url=',
-    'https://cors-anywhere.herokuapp.com/'
-]
 let index = 0;
 
-function prepareArrayForCORS() {
+function initPageArrayForCORS() {
     for (let i = 0; i < pageArray.length; i++) {
         if (pageArray[i].startsWith('www')) {
             console.log(pageArray[i] +
@@ -29,12 +24,11 @@ function prepareArrayForCORS() {
         }
     }
 };
-
 async function loadWebsiteIntoContainer() {
     if (index > pageArray + 1) {
         index = 0;
     }
-    prepareArrayForCORS();
+    initPageArrayForCORS();
     const website = pageArray[index];
     index++;
     console.log(website);

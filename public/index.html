@@ -28,20 +28,20 @@
     <dialog class="mdl-dialog text-center">
         <h4 class="mdl-dialog__title">Prihásenie</h4>
         <div class="mdl-dialog__content">
-            <p>Pred použitím všetkých funkcii je potrebné sa prihlásiť pomocou vlastných údajov alebo Google účtu</p>
+            <p>Pred použitím všetkých funkcii je potrebné sa prihlásiť pomocou vlastných údajov alebo <a>Google účtu</a></p>
             <hr>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="input_mail">
                 <label class="mdl-textfield__label" for="input_mail">Mailová adresa</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="input_pwd">
+                <input class="mdl-textfield__input" type="password" id="input_pwd">
                 <label class="mdl-textfield__label" for="input_pwd">Heslo</label>
             </div>
         </div>
         <div class="mdl-dialog__actions">
-            <button type="button" class="mdl-button">Prihlásiť sa</button>
-            <button type="button" class="mdl-button">Vytvoriť účet</button>
+            <button type="button" id="btn_login" class="mdl-button">Prihlásiť sa</button>
+            <button type="button" id="btn_register" class="mdl-button" onclick="createUser();">Vytvoriť účet</button>
         </div>
     </dialog>
 
@@ -112,15 +112,12 @@
         here to revoke the Cookie consent</a>
 
     <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=white&tracking=1&thirdparty=1&always=1&scrolling=1">
+        src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=white&tracking=1&thirdparty=1&always=1&scrolling=0">
     </script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-133294265-1"></script>
-    <script defer src="./assets/js/core.firebase.js"></script>
-    <script async src="./assets/js/core.main.js"></script>
-    <script async src="./assets/js/ui.index.js"></script>
+    <script src="./assets/js/core.main.js"></script>
+    <script src="./assets/js/ui.index.js"></script>
     <script defer src="./libs/material-design-lite@1.3.0/material.min.js"></script>
 
 </body>
