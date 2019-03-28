@@ -1,0 +1,132 @@
+{
+  "name": "Gakkō",
+  "short_name": "Gakko",
+  "theme_color": "#3F51B5",
+  "background_color": "#3F51B5",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/images/icons/color/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-144x144.png",
+      "sizes": "144x102",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-152x152.png",
+      "sizes": "152x107",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-192x192.png",
+      "sizes": "192x136",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/color/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-144x144.png",
+      "sizes": "144x102",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-152x152.png",
+      "sizes": "152x107",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-192x192.png",
+      "sizes": "192x136",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/dark/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-144x144.png",
+      "sizes": "144x102",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-152x152.png",
+      "sizes": "152x107",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-192x192.png",
+      "sizes": "192x136",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icons/white/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
