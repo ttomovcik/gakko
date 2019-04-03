@@ -3,6 +3,7 @@ const corsProxy = [
     'https://jsonp.afeld.me/?url=',
     'https://cors-anywhere.herokuapp.com/'
 ]
+// Load everything from settings and deal with it now.
 let pageArray = [
     settingsManager('get', 'edupageServer'),
     settingsManager('get', 'additionalPage1'),
@@ -24,6 +25,14 @@ function initPageArrayForCORS() {
         }
     }
 };
+
+/**
+ * ! Might do some weird shit
+ * * Prolly filter the array once called
+ * TODO: Compare page load with filtering now / once called
+ * TODO: Check if it leaks again
+ * @async
+ */
 async function loadWebsiteIntoContainer() {
     if (index > pageArray + 1) {
         index = 0;
