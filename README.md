@@ -35,16 +35,16 @@
 <!-- OBSAH -->
 ## Obsah
 
-* [🤔 O projekte](#🤔-O-projekte)
+* [🤔 O projekte](#-o-projekte)
   * [Použité nástroje](#Použité-nástroje)
   * [Dokumenty zo súťaže SOČ](#Dokumenty-zo-súťaže-SOČ)
-* [🎉 Začíname](#🎉-Začíname)
+* [🎉 Začíname](#-Začíname)
   * [Požiadavky](#Požiadavky)
   * [Prvé spustenie](#Prvé-spustenie)
-* [🦄 Jednorožce](#🦄-Jednorožce)
-* [🤦‍ Licencia](#🤦-Licencia)
-* [😯 Kontakt](#😯-Kontakt)
-* [🥣 Omáčky na záver](#🥣-Omáčky-na-záver)
+* [🦄 Jednorožce](#-Jednorožce)
+* [🤦‍ Licencia](#-Licencia)
+* [😯 Kontakt](#-Kontakt)
+* [🥣 Omáčky na záver](#-Omáčky-na-záver)
 
 
 # 🤔 O projekte
@@ -80,7 +80,7 @@ Ak si klikol / klikla na toto ako prvé:
 
 - Toto je maturitný projekt a práca na SOČ
 - Môžeš napríklad pomôcť pri vývoji
-- Odporúčam prečítať si túto dokumentáciu celú, hlavne [o projekte](#🤔-O-projekte), a samozrejme [omáčky na záver](#🥣-Omáčky-na-záver). Ostatné až tak podstatné nie je
+- Odporúčam prečítať si túto dokumentáciu celú, hlavne [o projekte](#-O-projekte), a samozrejme [omáčky na záver](#-Omáčky-na-záver). Ostatné až tak podstatné nie je
 
 # 🤦 Licencia
 No, používam Apache 2.0...
