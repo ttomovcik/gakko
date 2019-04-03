@@ -80,11 +80,10 @@ Ak si klikol / klikla na toto ako prvé:
 
 - Toto je maturitný projekt a práca na SOČ
 - Môžeš napríklad pomôcť pri vývoji
-- Ak sa ti to nepodarilo doteraz všimnúť, hľa, táto dokumentácia bude niekedy upravená
 - Odporúčam prečítať si túto dokumentáciu celú, hlavne [o projekte](#🤔-O-projekte), a samozrejme [omáčky na záver](#🥣-Omáčky-na-záver). Ostatné až tak podstatné nie je
 
 # 🤦 Licencia
-No, používame Apache 2.0...
+No, používam Apache 2.0...
 
 # 😯 Kontakt
 Autorom projektu je **Tomáš Tomovčík**
