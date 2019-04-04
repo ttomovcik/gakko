@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Nahlásiť chybu
+about: Odošlite hlásenie ktoré nám pomôže opraviť chyby v appke
 title: ''
 labels: bug
 assignees: ttomovcik
