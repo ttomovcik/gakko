@@ -8,6 +8,7 @@
 ![GitHub](https://img.shields.io/github/license/ttomovcik/gakko.svg?color=red&label=licencia&style=popout-square)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ttomovcik/gakko.svg?label=ve%C4%BEkos%C5%A5%20k%C3%B3du&style=popout-square)
 ![GitHub language count](https://img.shields.io/github/languages/count/ttomovcik/gakko.svg?color=grey&label=%3Cjazyky%2F%3E&style=popout-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/ttomovcik/gakko.svg?label=posledn%C3%A1%20aktivita&style=popout-square)
 
 <!-- PROJECT LOGO -->
 <br />
