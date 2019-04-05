@@ -50,8 +50,7 @@
 # 🤔 O projekte
 Gakkō je moderná e-nástenka a informačný systém pre školy zdarma. Momentálne je v štádiu vývoja, no dá sa otestovať už teraz. Stačí kliknúť na odkaz "demo" pod logom vyššie. 
 
-Tento projekt začínal ako mobilná aplikácia na maturitný projekt, no nakoniec sa prerába na progresívnu webovú aplikácie, pretože Edupage už mobilnú appku má. (No takúto čačanú nástenku nie 😊). A aby toho nebolo málo, bol poslaný aj na súťaž SOČ (2019) a bohvie kam to dotiahnem celé. 🤷‍. 
-
+Tento projekt začínal ako mobilná aplikácia na maturitný projekt, no nakoniec sa prerába na progresívnu webovú aplikácie, pretože Edupage už mobilnú appku má. (No takúto čačanú (informačnú a automatickú) nástenku nie 😊).
 >Ešte jedna vec, túto dokumentáciu niekedy upravím nech to dajako vyzerá, no dnes to nebude.
 
 ## Použité nástroje
