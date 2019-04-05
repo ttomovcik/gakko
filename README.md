@@ -61,7 +61,8 @@ Tento projekt začínal ako mobilná aplikácia na maturitný projekt, no nakoni
 - [Káva, alebo niečo tekuté](https://youtu.be/n0rftjZBq8Y)
 
 ## Dokumenty zo súťaže SOČ
->Niekedy by ich aj mal nahrať 🤷‍
+* [Práca](https://github.com/ttomovcik/gakko/blob/aether/SO%C4%8C%20-%20%C5%A0kolsk%C3%BD%20informa%C4%8Dn%C3%BD%20syst%C3%A9m.docx)
+* [Prezentácia](https://github.com/ttomovcik/gakko/blob/aether/Slajd%C5%A1ou%202.1.pptx)
 
 # 🎉 Začíname
 Čierna mágia je [na tejto stránke](https://gakko-webapp.firebaseapp.com/). Tu stačí kliknúť na položku "Demo" a malo by to fungovať. Ako som povedal, je to v štádiu vývoja.
